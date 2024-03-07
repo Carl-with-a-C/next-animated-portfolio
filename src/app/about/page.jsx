@@ -169,8 +169,11 @@ const AboutPage = () => {
             <motion.div
               className="flex flex-col"
               initial={{ opacity: 0 }}
-              animate={isExperienceRefInView ? { opacity: 1 } : {}}
-              transition={{ delay: 0.2 }}
+              animate={
+                isExperienceRefInView
+                  ? { opacity: 1, transition: { delay: 0.2, duration: 3 } }
+                  : {}
+              }
             >
               {/*EXPERIENCE LIST ITEM 1*/}
               <div className="flex justify-between h-48">
@@ -194,7 +197,7 @@ const AboutPage = () => {
                   </div>
                 </div>
                 {/*CENTER*/}
-                <div className="w-1/6">
+                <div className="w-1/6 flex items-center justify-center">
                   {/*LINE*/}
                   <div className="w-1 h-full bg-gray-600 rounded relative">
                     {/*CIRCLE*/}
@@ -209,7 +212,7 @@ const AboutPage = () => {
                 {/*LEFT*/}
                 <div className="w-1/3"></div>
                 {/*CENTER*/}
-                <div className="w-1/6">
+                <div className="w-1/6 flex items-center justify-center">
                   {/*LINE*/}
                   <div className="w-1 h-full bg-gray-600 rounded relative">
                     {/*CIRCLE*/}
@@ -254,7 +257,7 @@ const AboutPage = () => {
                   </div>
                 </div>
                 {/*CENTER*/}
-                <div className="w-1/6">
+                <div className="w-1/6 flex items-center justify-center">
                   {/*LINE*/}
                   <div className="w-1 h-full bg-gray-600 rounded relative">
                     {/*CIRCLE*/}
