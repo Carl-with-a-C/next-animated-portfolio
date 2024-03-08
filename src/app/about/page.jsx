@@ -62,26 +62,27 @@ const AboutPage = () => {
       className="h-full"
       initial={{ y: "-200vh" }}
       animate={{ y: 0 }}
-      transition={{ duration: 1.2 }}
+      transition={{ duration: 1 }}
     >
       {/*CONTAINER*/}
       <div className="h-full overflow-scroll lg:flex" ref={containerRef}>
         {/*TEXT CONTAINER*/}
         <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-2/3 lg:pr-0 xl:pr-0 xl:w-1/2">
           {/*BIO CONTAINER*/}
-          <div className="flex flex-col gap-12 justify-center">
+          <div className="flex flex-col gap-8 justify-center">
             {/*BIO TITLE*/}
-            <h1 className="font-bold text-2xl">BIOGRAPHY</h1>
+            <h1 className="font-Amulya font-bold text-6xl">BIOGRAPHY</h1>
             {/*BIO DESCRIPTION*/}
 
-            <p className="text-lg">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            <p className="font-Synonym text-lg">
+              I use a big metal brain, there are lots of cogs moving at
+              different speeds. I have spent a long time oiling this thing and
+              tuning it up.
             </p>
             {/*BIO QUOTE*/}
 
-            <span className="italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            <span className="font-Synonym italic">
+              "Design is where science and art break even."
             </span>
             {/*BIO SCROLL SVG*/}
             <div>
@@ -144,7 +145,7 @@ const AboutPage = () => {
                 <motion.div
                   variants={skillsItemVariants}
                   key={skill.name}
-                  className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black"
+                  className="font-Synonym rounded p-2 text-sm cursor-pointer bg-[#271624] text-[#EFEFDC] hover:scale-105 hover:bg-[rgb(211,106,195)] transition-colors duration-300"
                 >
                   {skill.name}
                 </motion.div>
@@ -158,10 +159,10 @@ const AboutPage = () => {
           >
             {/*EXPERIENCE TITLE*/}
             <motion.h1
-              initial={{ x: -300 }}
+              initial={{ x: -500 }}
               animate={isExperienceRefInView ? { x: 0 } : {}}
               transition={{ delay: 0.2 }}
-              className="font-bold text-2xl"
+              className="font-Amulya font-bold text-2xl"
             >
               EXPERIENCE
             </motion.h1>
@@ -178,22 +179,22 @@ const AboutPage = () => {
               {/*EXPERIENCE LIST ITEM 1*/}
               <div className="flex justify-between h-48">
                 {/*LEFT*/}
-                <div className="w-1/3">
+                <div className="w-1/3 flex flex-col justify-center items-start">
                   {/*JOB TITLE*/}
-                  <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
-                    Head of Front-end Development
+                  <div className="font-Synonym bg-[#EFEFDC] p-3 font-semibold rounded-b-lg rounded-s-lg">
+                    Creative Director
                   </div>
                   {/*JOB DESCRIPTION*/}
-                  <div className="p-3 text-sml italic">
-                    Doing stuff yo, smashing life one day at a time
+                  <div className="font-Synonym p-3 text-sml italic">
+                    Lead designer and front-end software developer
                   </div>
                   {/*JOB DATE*/}
-                  <div className="p-3 text-sml text-red-400 font-semibold">
-                    2022 - PRESENT
+                  <div className="font-Synonym p-3 text-sml text-[#D36AC3] font-semibold">
+                    JAN 2024 - PRESENT
                   </div>
                   {/*JOB COMPANY*/}
-                  <div className="p-1 rounded bg-white text-sml font-semibold w-fit">
-                    Buztek
+                  <div className="font-Synonym ml-2 p-1 rounded bg-[#271624] text-[#EFEFDC] text-sml font-semibold w-fit ">
+                    Buztek Ltd
                   </div>
                 </div>
                 {/*CENTER*/}
@@ -201,7 +202,7 @@ const AboutPage = () => {
                   {/*LINE*/}
                   <div className="w-1 h-full bg-gray-600 rounded relative">
                     {/*CIRCLE*/}
-                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white -left-2"></div>
+                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-[#D36AC3] bg-[#EFEFDC] -left-2"></div>
                   </div>
                 </div>
                 {/*RIGHT*/}
@@ -210,50 +211,56 @@ const AboutPage = () => {
               {/*EXPERIENCE LIST ITEM 2*/}
               <div className="flex justify-between h-48">
                 {/*LEFT*/}
-                <div className="w-1/3"></div>
+                <div className="w-1/3 flex flex-col justify-center items-start"></div>
                 {/*CENTER*/}
                 <div className="w-1/6 flex items-center justify-center">
                   {/*LINE*/}
                   <div className="w-1 h-full bg-gray-600 rounded relative">
                     {/*CIRCLE*/}
-                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white -left-2"></div>
+                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-[#D36AC3] bg-[#EFEFDC] -left-2"></div>
                   </div>
                 </div>
                 {/*RIGHT*/}
                 <div className="w-1/3">
                   {/*JOB TITLE*/}
-                  <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
-                    Head of Front-end Development
+                  <div className="bg-[#EFEFDC] p-3 font-semibold rounded-b-lg rounded-s-lg">
+                    Freelance Web Developer
                   </div>
                   {/*JOB DESCRIPTION*/}
                   <div className="p-3 text-sml italic">
-                    Doing stuff yo, smashing life one day at a time
+                    Designing and building web applications for business clients
+                    on reactJS framework, deployed on AWS
+                  </div>
+                  {/*JOB DATE*/}
+                  <div className="font-Synonym p-3 text-sml text-[#D36AC3] font-semibold">
+                    JAN 2023 - PRESENT
                   </div>
                   {/*JOB COMPANY*/}
-                  <div className="p-1 rounded bg-white text-sml font-semibold w-fit">
-                    Buztek
+                  <div className="font-Synonym ml-2 p-1 rounded bg-[#271624] text-[#EFEFDC] text-sml font-semibold w-fit">
+                    Various
                   </div>
                 </div>
               </div>
               {/*EXPERIENCE LIST ITEM 3*/}
               <div className="flex justify-between h-48">
                 {/*LEFT*/}
-                <div className="w-1/3">
+                <div className="w-1/3 flex flex-col justify-center items-start">
                   {/*JOB TITLE*/}
-                  <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
-                    Head of Front-end Development
+                  <div className="bg-[#EFEFDC] p-3 font-semibold rounded-b-lg rounded-s-lg">
+                    Junior full-stack Developer Student
                   </div>
                   {/*JOB DESCRIPTION*/}
                   <div className="p-3 text-sml italic">
-                    Doing stuff yo, smashing life one day at a time
+                    I enrolled on the software developer bootcamp, specialising
+                    in full stack software development
                   </div>
                   {/*JOB DATE*/}
-                  <div className="p-3 text-sml text-red-400 font-semibold">
-                    2022 - PRESENT
+                  <div className="p-3 text-sml text-[#D36AC3] font-semibold">
+                    OCT 2022 - JAN 2023
                   </div>
                   {/*JOB COMPANY*/}
-                  <div className="p-1 rounded bg-white text-sml font-semibold w-fit">
-                    Buztek
+                  <div className="font-Synonym ml-2 p-1 rounded bg-[#271624] text-[#EFEFDC] text-sml font-semibold w-fit">
+                    Northcoders
                   </div>
                 </div>
                 {/*CENTER*/}
@@ -261,7 +268,7 @@ const AboutPage = () => {
                   {/*LINE*/}
                   <div className="w-1 h-full bg-gray-600 rounded relative">
                     {/*CIRCLE*/}
-                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white -left-2"></div>
+                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-[#D36AC3] bg-[#EFEFDC] -left-2"></div>
                   </div>
                 </div>
                 {/*RIGHT*/}
