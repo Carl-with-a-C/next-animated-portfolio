@@ -25,13 +25,12 @@ const ContactPage = () => {
         process.env.NEXT_PUBLIC_PUBLIC_KEY
       )
       .then(
-        (result) => {
+        () => {
           setSuccess(true);
           form.current.reset();
         },
-        (error) => {
+        () => {
           setError(true);
-          console.log(error);
         }
       );
   };
@@ -45,7 +44,7 @@ const ContactPage = () => {
     >
       <div className="h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
         {/*TEXT CONTAINER*/}
-        <div className="h-1/2 lg:h-full lg:w-1/2 flex items-center justify-center text-6xl">
+        <div className="h-1/4 lg:h-full lg:w-1/2 flex items-center justify-center text-4xl lg:text-6xl">
           <motion.div className="flex">
             {text.split("").map((letter, index) => (
               <motion.span
@@ -86,7 +85,7 @@ const ContactPage = () => {
         <motion.form
           onSubmit={sendEmail}
           ref={form}
-          className="h-1/2 lg:h-full lg:w-1/2 ring-2 ring-[#271624] rounded-xl text-xl flex flex-col gap-8 justify-center p-24"
+          className="h-3/4 lg:h-full lg:w-1/2 ring-2 ring-[#271624] rounded-xl text-xl flex flex-col gap-4 lg:gap-8 justify-center p-6 md:p-12 lg:p-24"
           initial={{ opacity: 0, y: "100vh" }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 1, ease: "easeOut" }}

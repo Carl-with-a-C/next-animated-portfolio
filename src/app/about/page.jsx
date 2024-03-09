@@ -71,7 +71,9 @@ const AboutPage = () => {
           {/*BIO CONTAINER*/}
           <div className="flex flex-col gap-8 justify-center">
             {/*BIO TITLE*/}
-            <h1 className="font-Amulya font-bold text-6xl">BIOGRAPHY</h1>
+            <h1 className="font-Amulya font-bold text-4xl md:text-6xl">
+              BIOGRAPHY
+            </h1>
             {/*BIO DESCRIPTION*/}
 
             <p className="font-Synonym text-lg">
@@ -82,7 +84,7 @@ const AboutPage = () => {
             {/*BIO QUOTE*/}
 
             <span className="font-Synonym italic">
-              "Design is where science and art break even."
+              {`"Design is where science and art break even."`}
             </span>
             {/*BIO SCROLL SVG*/}
             <div>
@@ -154,7 +156,7 @@ const AboutPage = () => {
           </div>
           {/*EXPERIENCE CONTAINER*/}
           <div
-            className="flex flex-col gap-12 justify-center pb-48"
+            className="flex flex-col gap-24 md:gap-12 justify-center pb-48"
             ref={experienceRef}
           >
             {/*EXPERIENCE TITLE*/}
@@ -181,15 +183,15 @@ const AboutPage = () => {
                 {/*LEFT*/}
                 <div className="w-1/3 flex flex-col justify-center items-start">
                   {/*JOB TITLE*/}
-                  <div className="font-Synonym bg-[#EFEFDC] p-3 font-semibold rounded-b-lg rounded-s-lg">
+                  <div className="font-Synonym bg-[#EFEFDC] p-1 md:p-3 font-semibold rounded-b-lg rounded-s-lg">
                     Creative Director
                   </div>
                   {/*JOB DESCRIPTION*/}
-                  <div className="font-Synonym p-3 text-sml italic">
+                  <div className="font-Synonym p-1 md:p-3 text-sml italic">
                     Lead designer and front-end software developer
                   </div>
                   {/*JOB DATE*/}
-                  <div className="font-Synonym p-3 text-sml text-[#D36AC3] font-semibold">
+                  <div className="font-Synonym p-1 md:p-3 text-sml text-[#D36AC3] font-semibold">
                     JAN 2024 - PRESENT
                   </div>
                   {/*JOB COMPANY*/}
@@ -223,16 +225,16 @@ const AboutPage = () => {
                 {/*RIGHT*/}
                 <div className="w-1/3">
                   {/*JOB TITLE*/}
-                  <div className="bg-[#EFEFDC] p-3 font-semibold rounded-b-lg rounded-s-lg">
+                  <div className="bg-[#EFEFDC] p-1 md:p-3 font-semibold rounded-b-lg rounded-s-lg">
                     Freelance Web Developer
                   </div>
                   {/*JOB DESCRIPTION*/}
-                  <div className="p-3 text-sml italic">
+                  <div className="p-1 md:p-3 text-sml italic">
                     Designing and building web applications for business clients
                     on reactJS framework, deployed on AWS
                   </div>
                   {/*JOB DATE*/}
-                  <div className="font-Synonym p-3 text-sml text-[#D36AC3] font-semibold">
+                  <div className="font-Synonym p-1 md:p-3 text-sml text-[#D36AC3] font-semibold">
                     JAN 2023 - PRESENT
                   </div>
                   {/*JOB COMPANY*/}
@@ -246,16 +248,16 @@ const AboutPage = () => {
                 {/*LEFT*/}
                 <div className="w-1/3 flex flex-col justify-center items-start">
                   {/*JOB TITLE*/}
-                  <div className="bg-[#EFEFDC] p-3 font-semibold rounded-b-lg rounded-s-lg">
+                  <div className="bg-[#EFEFDC] p-1 md:p-3 font-semibold rounded-b-lg rounded-s-lg">
                     Junior full-stack Developer Student
                   </div>
                   {/*JOB DESCRIPTION*/}
-                  <div className="p-3 text-sml italic">
+                  <div className="p-1 md:p-3 text-sml italic">
                     I enrolled on the software developer bootcamp, specialising
                     in full stack software development
                   </div>
                   {/*JOB DATE*/}
-                  <div className="p-3 text-sml text-[#D36AC3] font-semibold">
+                  <div className="p-1 md:p-3 text-sml text-[#D36AC3] font-semibold">
                     OCT 2022 - JAN 2023
                   </div>
                   {/*JOB COMPANY*/}

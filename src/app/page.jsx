@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { motion, useMotionValue } from "framer-motion";
 import Link from "next/link";
 import HeadTracker from "../components/headTracker.jsx";
@@ -23,16 +22,16 @@ const Homepage = () => {
     >
       <div className="h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
         {/*IMAGE CONTAINER*/}
-        <div className="h-3/4 md:h-full lg:w-1/2 relative flex flex-col items-center justify-center ">
+        <div className="h-1/2 md:h-full lg:w-1/2 relative flex flex-col items-center justify-center ">
           {/* <Image src="/HeroCC.svg" alt="hero image" fill />
            */}
 
           <HeadTracker y={y} />
         </div>
         {/*TEXT CONTAINER*/}
-        <div className="h-2/3 gap-2 lg:h-full lg:w-1/2 flex flex-col  md:gap-4 lg:gap-6 xl:gap-8 items-center justify-center">
+        <div className="h-1/2 gap-2 lg:h-full lg:w-1/2 flex flex-col  md:gap-4 lg:gap-6 xl:gap-8 items-center justify-around md:justify-center">
           {/*TITLE*/}
-          <h1 className="font-Amulya uppercase text-4xl md:-6xl font-bold z-10">
+          <h1 className="font-Amulya uppercase text-2xl md:text-4xl font-bold z-10">
             {/* I design UI/UX, build websites and wear hoodies */}
             {titleText.split("").map((letter, index) => (
               <motion.span
@@ -55,9 +54,9 @@ const Homepage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 2.5, duration: 1, ease: "easeInOut" }}
           >
-            Hey I'm <strong>Carl</strong> a designer and developer who loves
-            making things, incluing this website. Have a look around and get in
-            touch if you'd like us to work together.
+            Hey I{`'`}m <strong>Carl</strong> a designer and developer who loves
+            making things{`,`} including this website. Have a look around and
+            get in touch if you{`'`}d like us to work together.
           </motion.p>
           {/*BUTTONS*/}
           <div className="lg:w-full flex gap-4">

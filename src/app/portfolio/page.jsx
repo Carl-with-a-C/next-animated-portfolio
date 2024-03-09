@@ -2,46 +2,47 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
 
-import hakkapoLogo from "../../../public/hakkapo.svg";
-import buztekLogo from "../../../public/buztekWORD.svg";
-import RJNWLogo from "../../../public/RJNW.svg";
-import flexboxLogo from "../../../public/flexbox.svg";
+// import hakkapoLogo from "../../../public/hakkapo.svg";
+// import buztekLogo from "../../../public/buztekWORD.svg";
+// import RJNWLogo from "../../../public/RJNW.svg";
+// import flexboxLogo from "../../../public/flexbox.svg";
 
 const items = [
   {
     id: 1,
     title: "Hakkapo",
-    logoPath: hakkapoLogo,
+    // logoPath: hakkapoLogo,
     desc: "A beautiful Japanese restaurant based in Manchester UK. Krzysztof and Simon wanted a welcoming and unique brand identity. I completed all design and branding on this project, as well as building a fun, cohesive website",
     link: "https://hakkapo.co.uk",
   },
   {
     id: 2,
     title: "Buztek Ltd",
-    logoPath: buztekLogo,
+    // logoPath: buztekLogo,
     desc: "As creative director of Buztek Ltd, I designed and built the website as well as completed all branding for the company",
     link: "https://buztek.co",
   },
   {
     id: 3,
     title: "Roofing & Joinery Northwest",
-    logoPath: RJNWLogo,
+    // logoPath: RJNWLogo,
     desc: "A local roofing and joinery company needed a new website to inform their customers of their services. I designed and built the site while modifying the logo subtly to match the aestetic",
     link: "https://www.roofingandjoinery.com",
   },
   {
     id: 4,
     title: "Flexbox",
-    logoPath: flexboxLogo,
+    // logoPath: flexboxLogo,
     desc: "A dynamic outdoor kitchen supplier required a dynamic website. I designed and built all aspects of the site and I am currently working on a kitchen builder accompanying project",
     link: "https://theflexbox.co.uk",
   },
 ];
 
+console.log(items[1].logoPath);
 const PortfolioPage = () => {
   const ref = useRef();
 
@@ -71,22 +72,23 @@ const PortfolioPage = () => {
                 className={"h-screen w-screen flex items-center justify-center"}
               >
                 <motion.div
-                  className="relative h-[70%] w-[90%] md:w-[80%] lg:w-[70%] ring-2 ring-[#EFEFDC] rounded-lg flex justify-center hover:bg-[#271624] transition-color duration-300"
+                  className="relative h-[70%] w-[90%] md:w-[80%] lg:w-[70%] ring-2 ring-[#EFEFDC] rounded-lg flex justify-center bg-[#271624] lg:bg-white lg:hover:bg-[#271624] transition-color duration-300"
                   whileHover={{ scale: 1.1 }}
                   transition={{ duration: 0.25, delay: 0.25 }}
                 >
                   <div className="relative flex flex-col gap-4 text-[#EFEFDC] p-4md:p-8 lg:p-12 justify-center items-center ">
-                    {/* <h1 className="font-Amulya text-xl font-bold md:text-2xl lg:text-4xl xl:text-6xl text-center">
+                    <div className="font-Amulya text-4xl md:text-6xl w-[90%] text-center font-semibold">
                       {item.title}
-                    </h1> */}
-                    <Image
+                    </div>
+                    {/* <Image
                       className="w-[200px] h-[100px]"
                       src={item.logoPath}
                       alt={`${item.title} logo`}
                       width={200}
                       height={100}
-                    ></Image>
-                    <p className="font-Synonym w-80 md:w-96 lg:w-[500px] lg:text-lg xl:w-[600px] text-center">
+                    /> */}
+
+                    <p className="font-Synonym w-[90%] md:w-96 lg:w-[500px] lg:text-lg xl:w-[600px] text-center">
                       {item.desc}
                     </p>
                     <Link

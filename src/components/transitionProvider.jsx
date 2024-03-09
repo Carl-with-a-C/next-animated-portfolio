@@ -4,11 +4,11 @@ import { AnimatePresence, motion } from "framer-motion";
 import Navbar from "./navbar";
 import { usePathname } from "next/navigation";
 
-const transitionProvider = ({ children }) => {
-  const pathName = usePathname();
+const TransitionProvider = ({ children }) => {
+  const PathName = usePathname();
   return (
     <AnimatePresence mode="wait">
-      <div key={pathName} className="w-screen h-screen bg-[#EFEFDC]">
+      <div key={PathName} className="w-screen h-screen bg-[#EFEFDC]">
         <motion.div
           className="h-screen w-screen fixed bg-[#D36AC3] rounded-b-sm z-30"
           animate={{ height: "0vh" }}
@@ -32,4 +32,4 @@ const transitionProvider = ({ children }) => {
   );
 };
 
-export default transitionProvider;
+export default TransitionProvider;
