@@ -16,7 +16,7 @@ const Brain = ({ scrollYProgress }) => {
   return (
     <div className="w-full h-full">
       <motion.div
-        className="absolute right-10 z-100"
+        className="absolute right-10"
         initial={{ scale: 55, x: "500%", y: "100%" }}
         animate={{ scale: 2.5, x: 0, y: 0 }}
         transition={{ duration: 1.5, delay: 1, ease: "easeOut" }}
