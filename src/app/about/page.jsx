@@ -58,12 +58,7 @@ const AboutPage = () => {
   const isExperienceRefInView = useInView(experienceRef, { margin: "-100px" });
 
   return (
-    <motion.div
-      className="h-full"
-      initial={{ y: "-200vh" }}
-      animate={{ y: 0 }}
-      transition={{ duration: 1 }}
-    >
+    <motion.div className="h-full">
       {/*CONTAINER*/}
       <div className="h-full overflow-scroll lg:flex" ref={containerRef}>
         {/*TEXT CONTAINER*/}
@@ -77,9 +72,9 @@ const AboutPage = () => {
             {/*BIO DESCRIPTION*/}
 
             <p className="font-Synonym text-lg">
-              I use a big metal brain, there are lots of cogs moving at
-              different speeds. I have spent a long time oiling this thing and
-              tuning it up.
+              I love making new stuff and approach every project with child-like
+              excitement. I enjoy the challenges of meeting a brief with the
+              most creative interpretations.
             </p>
             {/*BIO QUOTE*/}
 
